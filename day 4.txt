@@ -1,0 +1,305 @@
+1-> Count the number of digits in a given number
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        long a=obj.nextLong();
+        int count=0,c;
+        while(a!=0){
+            count+=1;
+            a=a/10;
+        }
+        System.out.println(count);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+2-> Write a C program Count the number of occurrences of a digit in a given number
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        int s=obj.nextInt();
+        int count=0,b,c;
+        while(a!=0){
+            b=a%10;
+            if(b==s)
+            {count+=1;}
+            a=a/10;
+        }
+        System.out.println(count);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+3-> Write a c Program to find the product of the digits in a given number
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        int count=1,b,c;
+        while(a!=0){
+            b=a%10;
+            count*=b;
+            a=a/10;
+        }
+        System.out.println(count); /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+4-> Print all the prime digits in a given number
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+    int count =0,j=0;
+        int[] arr = new int[10];
+        long digit =0,z=0;
+    Scanner sc = new Scanner(System.in);
+    long num1 = sc.nextLong();
+    while(num1>0)
+    {
+        count =0;
+        digit = num1%10;
+        for(int i=1;i<=digit;i++)
+        {
+            if(digit%i==0)
+            {
+                count ++;
+            }
+        }
+        if(count==2){
+            z=z*10+digit;
+        }
+        num1=num1/10;
+    }
+        while(z!=0){
+            System.out.print(z%10+" ");
+            z=z/10;
+        }
+    }
+}
+
+
+5-> Write a C program to display the digits of a given number from right to left
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int a;
+        while(n>0)
+        {   a=n%10;
+            System.out.print(a+" ");
+            n=n/10;
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+6->  Write a C program to find the reverse number of the given number
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n=sc.nextLong();
+        long a,rev=0;
+        while(n>0)
+        {   a=n%10;
+            rev=rev*10+a;
+            //System.out.print(a+" ");
+            n=n/10;
+        }
+        System.out.print(rev);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+
+7->  Write a C program to find whether the given number is Palindrome or Not
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n=sc.nextLong();
+        long a,rev=0,temp=n;;
+        while(n>0)
+        {   a=n%10;
+            rev=rev*10+a;
+            //System.out.print(a+" ");
+            n=n/10;
+        }
+        if(temp==rev){
+        System.out.print("Palindrome");
+        }
+        else
+            System.out.print("Not a Palindrome");
+            
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+8->  Find whether the given number is Adam or Not.
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Main
+{
+    public static void main(String[] args) {
+    //    System.out.println("Hello World");
+//    int num1 =1221;
+    int count =0;
+  long digit = 0,rev =0;
+    Scanner sc = new Scanner(System.in);
+    long num1 = sc.nextLong();
+        long temp =num1;
+   // int num2 = sc.nextInt();
+        while(num1>0){
+            digit = num1 % 10;
+//System.out.print(digit+" ");
+            rev =rev*10+digit;
+        num1=num1/10;
+    }
+        long sqr = temp * temp;
+        long revsqr = rev *rev;
+        long temp2=sqr;
+        long digit1=0,rev1=0;
+        while(temp2>0)
+        {
+            digit1 = temp2 %10;
+            rev1 = rev1*10+digit1;
+            temp2=temp2/10;
+        }
+         if(revsqr==rev1){
+        System.out.print("Adam Number");
+        }
+        else
+            System.out.print("Not a adam number");
+     
+            /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+9->  Find whether the given number is armstrong or not.
+
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+    public static void main(String[] args) {
+    //    System.out.println("Hello World");
+//    int num1 =1221;
+    int count =0;int  sol=0;
+  int digit = 0,rev =0,digit2=0;
+    Scanner sc = new Scanner(System.in);
+    int num1 = sc.nextInt();
+        int temp2=num1, temp1 =num1;
+   // int num2 = sc.nextInt();
+        while(num1>0){
+           count++;
+            //rev =rev*10+digit;
+        num1=num1/10;
+    }
+        for(int i=1;i<=count;i++)
+        {
+            digit2 = temp2%10; 
+            int store =(int)Math.pow(digit2,count);
+            sol = sol + store;
+            temp2=temp2/10;
+        }
+        if(temp1==sol)
+            System.out.println("Armstrong number");
+        else
+            System.out.println("Not an Armstrong number");
+    }
+}
+
+
+
+10->  Find whether the given number is strong number or not.
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        int sum=0,temp=a,b;
+        while(temp!=0){
+            b=temp%10;
+            int fact=1;
+            for (int i=1;i<=b;i++){
+                fact*=i;
+            }
+            sum+=fact;
+            temp=temp/10;
+        }
+        if(a==sum){
+            System.out.println("Strong Number");
+        }
+        else
+            System.out.println("Not a strong number");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }

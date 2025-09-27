@@ -1,0 +1,329 @@
+
+DAY - 2
+
+1 Check whether a triangle
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        if(a == b && a==c)
+        {
+            System.out.println("Equilateral");
+        }
+        else
+            if(a == b ||a==c||b==c)
+        {
+            System.out.println("Isosceles");
+        }
+        else
+        {
+            System.out.println("Scalene");
+        }
+        
+    }
+}
+
+2 positive or negative 1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int obj =sc.nextInt();
+        if(obj>0)
+        {
+            System.out.println("positive");
+            
+        }
+        else if(obj<0)
+        {
+            System.out.println("negative");
+        }
+        else
+        {
+            System.out.println("neutral");
+        }
+    }
+}
+
+
+3 leap year - Condition B2
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int obj =sc.nextInt();
+        if(obj%4==0)
+        {
+            if(obj%100==0)
+            {
+                if(obj%400==0)
+                {
+                    System.out.println("Leap year");
+                }
+                else{
+                    System.out.println("Not a Leap year");
+                }
+            }
+            else
+            {
+                System.out.println("Leap year");
+            }
+                
+        }
+        else
+        {
+            System.out.println("Not a Leap year");
+        }
+        
+    }
+}
+
+
+4 Electricity Bill Calculator 12
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+          Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        
+        if(a>0 &&a<=100)
+        {
+            System.out.println(a*5);
+        }
+        else
+            if(a>100 && a<=200)
+        {
+                int b=a-100;
+                int c= 100*5+b*7;
+            System.out.println(c);
+        }
+        else 
+        {
+           // int x=a-100;
+            int y=a-200;
+            int s1=100*5+100*7+y*10;
+            System.out.println(s1);
+        }
+        
+    
+
+    
+    }
+}
+
+
+5 Simple Calculator 50
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+          Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b=sc.nextInt();
+        char c= sc.next().charAt(0);
+        switch(c)
+        {
+                
+            case '+':
+                System.out.println(a+b);
+                break;
+                case '-':
+                System.out.println(a-b);
+                break;
+                case '*':
+                System.out.println(a*b);
+                break;
+                case '/':
+                {
+                    if(b!=0)
+                        System.out.println(a/b);
+                    else
+                        System.out.println("Error");
+                }
+                break;
+            default:
+                System.out.println("operator out of bound");
+                
+        }
+        
+        
+        
+        
+    
+
+    }
+    
+}
+
+6  Conditional Statement -1
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int a= sc .nextInt();
+        if(a%3==0 && a%5==0)
+        {
+            System.out.println("HiHello");
+        }
+        else if(a%3==0)
+        {
+            System.out.println("Hi");
+        }
+        else
+            if(a%5==0)
+            {
+                System.out.println("Hello");
+            }
+        else
+        {
+            System.out.println("Neither divided by 5 0r 3");
+        }
+    }
+}
+
+
+
+7 Ticket Price Calculator 1
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
+        String str= sc.next();
+        if(str.equals("monday")||str.equals("tuesday")||str.equals("wednesday")|| str.equals("thursday")||str.equals( "friday"))
+        {
+            if(age<12)
+            {
+                System.out.println("100");
+            }
+            else if(age>=12 && age<=59)
+            {
+                System.out.println("150");
+            }
+            else
+            {
+                System.out.println("90");
+            }
+        }
+       // else if(str == "saturday"||str== "sunday")
+        else
+        {
+            
+            if(age<12)
+            {
+                System.out.println("80");
+            }
+            else if(age>=12 && age<=59)
+            {
+                System.out.println("120");
+            }
+            else
+            {
+                System.out.println("70");
+            }
+        }
+        
+    }
+}
+
+
+8 Bus Fare Based on Route and Time
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main (String [] args){
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+          Scanner sc = new Scanner(System.in);
+        
+        char bus= sc.next().charAt(0);
+        int time=sc.nextInt();
+        if(time<12)
+        {
+            if(bus=='A')
+                System.out.println("25");
+            else if(bus == 'B')
+                System.out.println("20");
+            else
+                System.out.println("15");
+        }
+        else
+        {
+            if(bus=='A')
+                System.out.println("30");
+            else if(bus == 'B')
+                System.out.println("25");
+            else
+                System.out.println("20");
+        }
+               
+        
+    }
+}
+
+
+

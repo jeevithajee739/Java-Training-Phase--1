@@ -1,0 +1,425 @@
+Traversing - Array B7
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        for(int x:arr)
+            System.out.print( x+" ");
+    }
+}
+
+
+
+
+
+
+Reversal - Array B7
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        for(int i=n-1;i>=0;i--)
+            System.out.print( arr[i]+" ");
+    }
+}
+
+
+
+Sum of the array - Array B7
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int sum=0;
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        for(int i=0;i<n;i++)
+            sum+=arr[i];
+         System.out.print( sum);
+    }
+}
+
+
+
+count odd & even - Array B7
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int even=0,odd=0;
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        for(int i=0;i<n;i++){
+            if(arr[i]%2==0)
+                even++;
+            else
+                odd++;}
+         System.out.println("Odd = "+odd);
+        System.out.println("Even = "+even);
+    }
+}
+
+
+
+
+Count 0s & 1s - Array B7
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int zc=0,oc=0;
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        for(int i=0;i<n;i++){
+            if(arr[i]==0)
+                zc++;
+            if(arr[i]==1)
+                oc++;
+        }
+         System.out.println("zc = "+zc);
+        System.out.println("oc = "+oc);
+    }
+}
+
+
+Find the largest element - Array S7
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        int max=arr[0];
+        for(int i=0;i<n;i++){
+            if(arr[i]>max)
+                max=arr[i];}
+         System.out.println(max);
+    }
+}
+
+
+Smallest element - Array S7
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++)
+            arr[i] = sc.nextInt();
+        int min=arr[0];
+        for(int i=0;i<n;i++){
+            if(arr[i]<min)
+                min=arr[i];
+        }
+        System.out.println(min);
+    }
+}
+
+
+
+Arrays 1D - Same or Not 2
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n1 = sc.nextInt();
+        int arr1[] = new int[n1];
+        int n2 = sc.nextInt();
+        int arr2[] = new int[n2];
+        int sum1=0,sum2=0;
+        for(int i=0;i<arr1.length;i++){
+            arr1[i]= sc.nextInt();
+            sum1+=arr1[i];}
+        for(int i=0;i<arr2.length;i++){
+            arr2[i]= sc.nextInt();
+            sum2+=arr2[i];}
+        if(n1==n2 && sum1==sum2 )
+        System.out.println("Same");
+        else
+        System.out.println("Not Same");
+ 
+    }
+}
+
+
+
+
+
+
+Collatz Sequence 6 1
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println("Enter a number");
+        System.out.println(n);
+        int c=0;
+       while(n!=1) {
+           if(n==1){
+        System.out.println(1);
+               break;
+        }
+        if(n%2==0){
+            n=n/2;
+        System.out.println(n);}
+        else{
+            n=3*n+1;
+        System.out.println(n);}
+ 
+           c++;
+       }
+ 
+    System.out.println("count:"+c);
+    }
+}
+
+
+
+
+
+Find home address
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int tar=0;
+        for(int i=0;i<arr.length;i++)
+            arr[i]= sc.nextInt();
+ 
+        int a=sc.nextInt();
+ 
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==a){
+                tar=i;
+            break;}
+                else
+                    tar=-1;
+            }
+            if(tar!=-1)
+                System.out.println("Door Number is 00"+tar+"-DN");
+            else
+                System.out.println(-1);
+ }}
+
+
+
+
+
+Maximum Product Of Two Elements In An Array 1 1
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n= sc.nextInt();
+        int[] arr = new int[n];
+        int largest = Integer.MIN_VALUE, secondLargest = Integer.MIN_VALUE;
+        for(int i =0;i<n;i++)
+            arr[i]=sc.nextInt();
+        for (int num : arr) {
+            if (num > largest) {
+                secondLargest = largest;
+                largest = num;
+            }
+            else if (num > secondLargest && num != largest) {
+                secondLargest = num;
+            }
+        }
+
+            System.out.println("Maximum product of two elements in an array is "+((secondLargest-1) * (largest-1)));
+    }
+}
+
+
+
+
+
+Minimum Cuts to Divide a Circle
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n==1)
+            System.out.println("0");
+        else if(n%2==0)
+            System.out.println(n/2);
+        else
+            System.out.println(n);
+ 
+    }
+}
+
+
+
+
+
+Shuffle The Array 8
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int l=0;
+          Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<arr.length;i++)
+            arr[i]= sc.nextInt();
+        int m = sc.nextInt();
+        for(int i=0;i<n;i++){
+            if(m<n){
+                System.out.print( arr[i]+ " " +arr[m]+" ");
+                m++;
+            }}
+ 
+}}
+
+
+
+Youngest-oldest 2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<arr.length;i++)
+            arr[i]= sc.nextInt();
+        int max=arr[0], min=arr[0];
+        for(int x: arr){
+            if(x>max)
+                max=x;
+            if(x<min)
+                min=x;
+        }
+        System.out.println("Youngest="+min);
+        System.out.println("Oldest="+max);
+    }
+}

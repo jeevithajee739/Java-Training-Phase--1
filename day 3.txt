@@ -1,0 +1,331 @@
+1->  square pattern
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n = 5;
+		for(int i=1;i<=n;i++) {
+		    for(int j=1;j<=n;j++) {
+		        System.out.print("* ");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+
+2->  right triangle
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n = 3;
+		for(int i=1;i<=n;i++) {
+		    for(int j=1;j<=i;j++) {
+		        System.out.print("* ");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+
+3->  inverse right triangle
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n = 3;
+		for(int i=1;i<=n;i++) {
+		    for(int j=i;j<=n;j++) {
+		        System.out.print("* ");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+4->  hallow square
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n=9;
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++) {
+		        if(i==1||i==n||j==1||j==n)
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		        
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+5-> I pattern
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n=9;
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++) {
+		        if(i==1||i==n||j==n/2+1)
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		        
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+6-> e pattern
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n=9;
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++) {
+		        if(i==1||i==n||i==n/2+1||j==1)
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		        
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+
+7->  u pattern 
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n=9;
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++) {
+		        if(i==n||j==1||j==n)
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		        
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+8->  z pattern
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n=9;
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++) {
+		        if(i==1||i==n||j==n-i+1)
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		        
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+
+9->  x pattern
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n=9;
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++) {
+		        if(j==(n-i)+1||j==i)
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+
+10-> pyramid pattern
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n= sc.nextInt();
+	    for(int i=1;i<=n;i++){
+	        for(int k=i;k<=n;k++){
+	            System.out.print(" ");
+	        }
+	        for(int j=1;j<=i;j++){
+	            System.out.print("* ");
+	        }
+		System.out.println();}
+	}
+}
+
+11->  left triangle
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n= sc.nextInt();
+	    for(int i=1;i<=n;i++){
+	        for(int k=i;k<n;k++){
+	            System.out.print(" ");
+	        }
+	        for(int j=1;j<=i;j++){
+	            System.out.print("*");
+	        }
+	        
+	        
+		System.out.println();}
+	}
+}
+
+
+12->  A pattern
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++){
+		        if(i==1 || i==(n/2)+1 || j==1 || j==n)
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		    } System.out.println();
+		}
+	}
+}
+
+
+13->  S pattern 
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++){
+		       int  m=n/2+1;
+		       if( i==1 || i==n || i==n/2+1 || (j==1 && i<m )|| (j==n && i m) )
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		    } System.out.println();
+		}
+	}
+}
+
+
+14->  M pattern
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++){
+		       int  m=n/2+1;
+		        if( j==1 || j==n || (j==i && j<=m )|| ((i+j == n+1) && j>m) )
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		    } System.out.println();
+		}
+	}
+}
+
+
+15-> curve s pattern
+
+
+ import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++){
+		       int  m=n/2+1;
+		        if( i==1 && j>1 || i==n/2+1 && j>1 && j<n || i==n && j<n || j==1&& i<m && i>1 || j==n && i>m && i<n)
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		    } System.out.println();
+		}
+	}
+}
+
+
+16-> curve o pattern
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++){
+		    for(int j=1;j<=n;j++){
+		       int  m=n/2+1;
+		        if( i==1 && j>1 && j<n || j>1 && i==n && j<n || j==1 && i<n && i>1 || j==n && i>1&& i<n)
+		        System.out.print("*");
+		        else
+		        System.out.print(" ");
+		    } System.out.println();
+		}
+	}
+}
+
+17->  swastika pattern
+
+
+import java.util.*;
+public class pattern1
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int a=0;
+	    for(int i=1;i<=n;i++){
+	        for(int j=1;j<=n;j++){
+	            if((j==1 && i<n/2+1) || i==n/2+1 || (i==1 && j>n/2+1) || (i==n && j<n/2+1) || j==n/2+1 || (j==n && i>n/2+1)  )
+	            System.out.print("*");
+	            else
+	            System.out.print(" ");
+	        }
+	        System.out.println();
+	    }
+		//System.out.println("Hello World");
+	}
+}

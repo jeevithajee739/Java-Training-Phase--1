@@ -1,0 +1,382 @@
+A program to check if two matrices are identical
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int r1= sc.nextInt();
+        int c1= sc.nextInt();
+        int arr1[][] = new int[r1][c1];
+        for(int i=0;i<r1;i++){
+            for(int j=0;j<c1;j++){
+                arr1[i][j]=sc.nextInt();
+            }
+        }
+        int r2= sc.nextInt();
+        int c2= sc.nextInt();
+        int arr2[][] = new int[r2][c2];
+        for(int i=0;i<r2;i++){
+            for(int j=0;j<c2;j++){
+                arr2[i][j]=sc.nextInt();
+            }
+        }
+        if(Arrays.deepEquals(arr1,arr2))
+           System.out.println("IDENTICAL");
+        else
+           System.out.println("NOT IDENTICAL");
+    }
+}
+
+
+
+
+
+
+
+
+
+A program to accept the 2D array from the user and display the array in the form of a matrix
+
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int r1= sc.nextInt();
+        int c1= sc.nextInt();
+        int arr1[][] = new int[r1][c1];
+        for(int i=0;i<r1;i++){
+            for(int j=0;j<c1;j++){
+                arr1[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<r1;i++){
+            for(int j=0;j<c1;j++){
+                System.out.print(arr1[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+A program to find the row with maximum zeros (if any)
+
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n= sc.nextInt();
+        int arr1[][] = new int[n][n];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr1[i][j]=sc.nextInt();
+            }
+        }
+      int count=0,max=0,index=-1;
+        for(int i=0;i<n;i++){
+            count=0;
+            for(int j=0;j<n;j++){
+               if(arr1[i][j]==0)
+                   count++;
+            }
+ 
+               if(count>max){
+                   max=count;
+                   index=i;
+               }
+ 
+        }
+        if(max==0)
+            System.out.println("No row has zeros");
+        else
+            System.out.println(index);
+ 
+    }
+}
+
+
+
+
+
+A program to print the sum of all elements in the matrix
+
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner sc = new Scanner (System.in);
+        int r1= sc.nextInt();
+        int c1= sc.nextInt();
+        int arr1[][] = new int[r1][c1];
+        for(int i=0;i<r1;i++){
+            for(int j=0;j<c1;j++){
+                arr1[i][j]=sc.nextInt();
+            }
+        }
+        int sum=0;
+        for(int i=0;i<r1;i++){
+            for(int j=0;j<c1;j++){
+                sum+=arr1[i][j];
+            }
+        }
+ 
+ 
+            System.out.println("Sum of All Elements of the Matrix is "+sum);
+    }
+}
+
+
+
+
+A program to search an element in the matrix. If the element is present display its row and column value,otherwise display as not present.
+
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n= sc.nextInt();
+        int k= sc.nextInt();
+        int arr1[][] = new int[n][n];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr1[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(arr1[i][j]==k){
+                System.out.println("Element found at row "+i+" and col "+j);
+                return;}
+ 
+            }
+        }
+     System.out.println("Element not found");
+ 
+               }
+}
+
+
+
+a 2D matrix, write a program to find and print the sum of upper triangular matrix
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner sc = new Scanner (System.in);
+        int n= sc.nextInt();
+        int arr1[][] = new int[n][n];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr1[i][j]=sc.nextInt();
+            }
+        }
+        int sum=0;
+        for(int i=0;i<n;i++){
+            for(int j=i;j<n;j++){
+                sum+=arr1[i][j];
+            }
+ 
+        }
+     System.out.println(sum) ;
+    }
+}
+
+
+
+
+a program to print the sum of each column of the matrix
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner sc = new Scanner (System.in);
+        int n= sc.nextInt();
+        int n1= sc.nextInt();
+        int arr1[][] = new int[n][n1];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n1;j++){
+                arr1[i][j]=sc.nextInt();
+            }
+        }
+        int sum=0;
+        for(int i=0;i<n1;i++){
+            sum=0;
+            for(int j=0;j<n;j++){
+                sum+=arr1[j][i];
+            }
+             System.out.println("Sum of the Column "+(i+1) +" is "+sum);
+        }
+ 
+    }
+}
+
+
+
+a program to print the sum of each row of the matrix
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n= sc.nextInt();
+        int n1= sc.nextInt();
+        int arr1[][] = new int[n][n1];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n1;j++){
+                arr1[i][j]=sc.nextInt();
+            }
+        }
+        int sum=0;
+        for(int i=0;i<n;i++){
+            sum=0;
+            for(int j=0;j<n1;j++){
+                sum+=arr1[i][j];
+            }
+             System.out.println("Sum of the Row "+(i+1) +" is "+sum);
+        }
+    }
+}
+
+
+
+
+a program to print the sum of major diagonal of the matrix
+
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n= sc.nextInt();
+        int n1= sc.nextInt();
+        int arr1[][] = new int[n][n1];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n1;j++){
+                arr1[i][j]=sc.nextInt();
+            }
+        }
+        int sum=0;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n1;j++){
+                if(i==j)
+                sum+=arr1[i][j];
+            }}
+             System.out.println("Sum of the Main Diagonal Matrix is " +sum);
+    }
+}
+
+
+
+
+a program to print the sum of minor diagonal of the matrix
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner sc = new Scanner (System.in);
+        int n= sc.nextInt();
+        int arr1[][] = new int[n][n];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr1[i][j]=sc.nextInt();
+            }
+        }
+        int sum=0;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if((i+j)==(n-1))
+                sum+=arr1[i][j];
+            }
+        }
+             System.out.println(sum);
+    }
+}
